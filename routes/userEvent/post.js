@@ -15,8 +15,9 @@ module.exports = function (req, res, next) {
       "state": req.params.state
     })
     .create()
-    .then(function (res) {
-      console.log(res.statusCode);
+    .then(function (result) {
+      console.log(result.statusCode);
+      res.send(result.statusCode);
     });
   
   next();
