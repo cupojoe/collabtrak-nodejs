@@ -20,6 +20,12 @@ server.post('/user/:uid/event', postUserEvent);
 
 server.pre(restify.pre.userAgentConnection());
 
-server.listen(8080, function() {
-  console.log('%s listening at %s', server.name, server.url);
-});
+if (proccess.env.environment == 'local') {
+  server.listen(8080, function() {
+    console.log('%s listening at %s', server.name, server.url);
+  });
+} else {
+  server.listen(80, function() {
+    console.log('%s listening at %s', server.name, server.url);
+  });
+}
