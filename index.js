@@ -25,7 +25,7 @@ if (process.env.environment == 'local') {
     console.log('%s listening at %s', server.name, server.url);
   });
 } else {
-  server.listen(80, function() {
+  server.listen(process.env.PORT, function() {
     console.log('%s listening at %s', server.name, server.url);
   });
 }
