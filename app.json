@@ -1,0 +1,6 @@
+{
+  "name": "collabtrak-nodejs",
+  "description": "App to record iBeacon ranging onto a Orchestrate.io",
+  "repository": "https://github.com/cupojoe/collabtrak-nodejs",
+  "keywords": ["node", "restify", "ibeacon"]
+}
