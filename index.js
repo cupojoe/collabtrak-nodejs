@@ -5,6 +5,7 @@ var server = restify.createServer();
 
 var getUser = require('./routes/user/get');
 var postUserEvent = require('./routes/userEvent/post');
+var getBeacons = require('./routes/beacons/get');
 
 server.use(restify.bodyParser());
 server.use(
@@ -17,6 +18,7 @@ server.use(
 
 server.get('/user/:uid', getUser);
 server.post('/user/:uid/event', postUserEvent);
+server.get('/beacons', getBeacons);
 
 server.pre(restify.pre.userAgentConnection());
 
